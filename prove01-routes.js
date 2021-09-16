@@ -4,6 +4,7 @@ const requestHandler = (req, res) => {
     const url = req.url;
     const method = req.method;
     if (url === '/') {
+        res.setHeader('Content-Type', 'text/html');
         res.write('<html>');
         res.write('<head><title>Assignment 1</title></head>');
         res.write('<body><form action="/create-user" method="POST"><input type="text" name="username"><button type="submit">Send</button></form></body>');
@@ -24,23 +25,20 @@ const requestHandler = (req, res) => {
             console.log(chunk);
             body.push(chunk);
         });
-        return req.on('end', () => {
+        req.on('end', () => {
             const parsedBody = Buffer.concat(body).toString();
-            console.log(parsedBody);
-            const message = parsedBody.split('=')[1];
-            fs.writeFile('message.txt', message, (err) => {
+            console.log(parsedBody.split('=')[1]);
+            const username = parsedBody.split('=')[1];
+            fs.writeFile('message.txt', username, (err) => {
                 res.statusCode = 302;
                 res.setHeader('Location', '/');
                 return res.end();
             });
         });
+        //res.statusCode = 302;
+        //res.setHeader('Location', '/');
+        //res.end();
     }
-    res.setHeader('Content-Type', 'text/html');
-    res.write('<html>');
-    res.write('<head><title>First server</title></head>');
-    res.write('<body><h1>Hello! Let us see how this Node.js stuff works!</h1></body>');
-    res.write('</html>');
-    res.end();
 };
 
 module.exports = requestHandler;

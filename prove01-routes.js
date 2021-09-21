@@ -35,9 +35,6 @@ const requestHandler = (req, res) => {
                 return res.end();
             });
         });
-        //res.statusCode = 302;
-        //res.setHeader('Location', '/');
-        //res.end();
     }
 };
 

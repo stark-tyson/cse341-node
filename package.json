@@ -1,0 +1,27 @@
+{
+  "name": "cse341-node",
+  "version": "1.0.0",
+  "description": "Complete Node.js Guide",
+  "main": "prove01.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon prove01.js",
+    "prove02": "nodemon prove02.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stark-tyson/cse341-node.git"
+  },
+  "author": "Tyson Stark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stark-tyson/cse341-node/issues"
+  },
+  "homepage": "https://github.com/stark-tyson/cse341-node#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0"
+  }
+}

@@ -2,11 +2,10 @@
   "name": "cse341-node",
   "version": "1.0.0",
   "description": "Complete Node.js Guide",
-  "main": "prove01.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon prove01.js",
-    "prove02": "nodemon prove02.js"
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",

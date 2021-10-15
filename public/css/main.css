@@ -24,11 +24,19 @@ form {
 }
 
 .image {
-  height: 20rem;
+  height: auto;
+  width: 100%;
+  vertical-align: middle;
 }
 
 .image img {
   height: 100%;
+}
+
+.card__image img {
+  max-height: 35rem;
+  max-width: 30rem;
+  object-fit: cover;
 }
 
 .main-header {
@@ -232,6 +240,21 @@ form {
   color: white;
 }
 
+.user-message {
+  margin: auto;
+  width: 90%;
+  padding: .5rem;
+  border: 1px solid rgb(67, 4, 148);
+  border-radius: 3px;
+  background: rgb(105, 105, 184);
+  text-align: center;
+}
+
+.user-message--error {
+  border-color: crimson;
+  background: rgb(235, 106, 132);
+}
+
 @media (min-width: 768px) {
   .main-header__nav {
     display: flex;
@@ -239,5 +262,9 @@ form {
 
   #side-menu-toggle {
     display: none;
+  }
+
+  .user-message {
+    width: 30rem;
   }
 }

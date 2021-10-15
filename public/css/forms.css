@@ -1,11 +1,14 @@
 .form-control {
     margin: .5rem;
 }
+
 .form-control label, 
 .form-control input, 
 .form-control textarea {
     display: block;
-    width: 100%;
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
     margin-bottom: 0.25rem;
 }
 

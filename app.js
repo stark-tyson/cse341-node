@@ -1,6 +1,6 @@
 const path = require('path');
 const PORT = process.env.PORT || 3000; // So we can run on heroku || (OR) localhost:3000
-const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://Tyson:PlyPwIqfRkRHSZeJ@cluster0.2xac1.mongodb.net/shop?retryWrites=true&w=majority";
+const MONGODB_URL = process.env.MONGODB_URL || "mongodb+srv://Tyson:gO9pGhRPLurbqTdy@cluster0.2xac1.mongodb.net/shop?retryWrites=true&w=majority";
 
 const express = require('express');
 const bodyParser = require('body-parser');
